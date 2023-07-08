@@ -11,7 +11,6 @@ def third(*args2):
 @third(10, 10)
 def div(a, b):
     return a + b
-
 print(div(10, 5))
 print(div(10, 5))
 print(div(10, 5))
@@ -25,12 +24,9 @@ def register_call(func):
     w.c = 0
     return w
 
-
 @register_call
 def test(a, b):
     return a * b
-
-
 print(test(1, 2))
 print(test(2, 3))
 
@@ -44,10 +40,24 @@ def check(func):
 
     return odd_even
 
-
 @check
 def test(*args):
     pass
-
-
 print(test(1, 1, 1, 1, 1))
+
+
+
+import time
+def time_(func):
+    def inner(*args):
+        start = time.time()
+        result = func(*args)
+        elapsed_time = time.time() - start
+        print("Time taken:", elapsed_time)
+        return result
+    return inner
+
+@time_
+def div(a, b):
+    return a / b
+print(div(1, 1))
