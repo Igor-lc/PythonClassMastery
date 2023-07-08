@@ -33,3 +33,21 @@ def test(a, b):
 
 print(test(1, 2))
 print(test(2, 3))
+
+
+def check(func):
+    def odd_even(*args):
+        for i, el in enumerate(args[1:], 1):
+            if (args[i - 1] & 1) != (el & 1):
+                return "odd_even"
+        return('even', 'odd')[args[0] & 1]
+
+    return odd_even
+
+
+@check
+def test(*args):
+    pass
+
+
+print(test(1, 1, 1, 1, 1))
