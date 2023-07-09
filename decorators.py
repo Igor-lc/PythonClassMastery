@@ -6,6 +6,7 @@ def third(*args2):
             print("first")
             return f"{func(*args)}, {func(*args2)}"
         return first
+    print("third")
     return second
 
 @third(10, 10)
