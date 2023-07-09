@@ -82,3 +82,4 @@ def multiply(a, b):
     return a * b
 
 multiply(2, 5)
+multiply(2, 5)
