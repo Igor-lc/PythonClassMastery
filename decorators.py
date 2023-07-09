@@ -66,7 +66,6 @@ print(div(1, 1))
 
 '''Repeat Execution
 Create a decorator that repeats the execution of a function a specified number of times. The decorator should take the number of repetitions as an argument.'''
-
 def repeat_execution(num_repeats):
     def decorator(func):
         def wrapper(*args, **kwargs):
