@@ -61,3 +61,23 @@ def time_(func):
 def div(a, b):
     return a / b
 print(div(1, 1))
+
+
+'''Repeat Execution
+Create a decorator that repeats the execution of a function a specified number of times. The decorator should take the number of repetitions as an argument.'''
+
+def repeat_execution(num_repeats):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(num_repeats):
+                result = func(*args, **kwargs)
+                print("Result:", result)
+            return result
+        return wrapper
+    return decorator
+
+@repeat_execution(3)
+def multiply(a, b):
+    return a * b
+
+multiply(2, 5)
