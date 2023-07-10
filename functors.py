@@ -5,7 +5,7 @@ Task 2: StringLengthCheckFunctor
 Implement a functor called StringLengthCheckFunctor that checks whether a given string has more than 5 characters. The functor should return true if the string is longer than 5 characters and false otherwise.
 
 Task 3: IntegerSortingFunctor
-Create a functor called IntegerSortingFunctor that sorts a list of integers in ascending order. You can use any sorting algorithm of your choice (e.g., bubble sort or insertion sort) to implement the functor.'''
+Create a functor called IntegerSortingFunctor that sorts a list of integers in ascending order.'''
 
 class AddConstantFunctor:
     def __init__(self, constant_value):
